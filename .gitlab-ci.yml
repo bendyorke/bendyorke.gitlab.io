@@ -1,0 +1,14 @@
+image: thosmos/boot-clj
+
+before_script:
+  - . ./boot.properties
+  - boot -V
+
+pages:
+  script:
+    - boot build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
